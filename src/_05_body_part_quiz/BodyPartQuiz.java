@@ -51,25 +51,32 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+		int score = 0;
 		// 2. Set the size of the window in the initializeGui() method 
-
+		initializeGui();
 		// 4. Ask the user who this person is and store their answer
+		for (int i = 0; i < 3; i++) {
+			
+		
 		String guess = JOptionPane.showInputDialog("who is this?");
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+		if (guess.equalsIgnoreCase("Arnold")) {
+			JOptionPane.showMessageDialog(null, "You are correct!");
+			score =+ 1;
+		}
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
-
+		else {JOptionPane.showMessageDialog(null, "bruh how did you not get that? IT'S OBVIOUSLY ARNOLD!!!! HOW??? IT'S SO OBVIOUS!");
+		}
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
-
+		}
 		// 8. .... repeat 4-7 for all your images.....
 
 		// 9. Show them their current score
-
+		JOptionPane.showMessageDialog(null, "wow you got so much points! You got" +score+ "points!!!");
 	}
 
 	public void showNextImage() {

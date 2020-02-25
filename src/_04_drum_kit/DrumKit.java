@@ -21,6 +21,7 @@ import javax.swing.JPanel;
 public class DrumKit implements MouseListener {
 
 	JLabel drumLabelWithImage;
+	JLabel cymbalLabelWithImage;
 
 	public void run() throws MalformedURLException {
 
@@ -84,13 +85,16 @@ public class DrumKit implements MouseListener {
 		
 		// 16. If they clicked on the drumImage...
 		String CymbalSound = "cymbal.wav";
-		if (drumClicked == drumLabelWithImage) {
+		String DrumSound = "drum.wav";
+		JLabel cybalClicked = (JLabel) e.getSource();
+		if (cybalClicked == cymbalLabelWithImage) {
 			playSound(CymbalSound);
 			System.out.println("mouse clicked");
 		}
 		// 17. ...use the playSound method to play a drum sound. Test to see if
 		// it works
-
+	if (drumClicked == drumLabelWithImage);
+	playSound(DrumSound);
 	}
 
 	private JLabel createLabelImage(String fileName) throws MalformedURLException {
