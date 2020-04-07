@@ -1,6 +1,9 @@
 package _08_jack_in_the_box;
 
 import java.applet.AudioClip;
+import java.awt.Button;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.print.DocFlavor.URL;
 import javax.swing.Icon;
@@ -10,7 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class jackinthebox {
+public class jackinthebox implements ActionListener {
 	public void showButton() {
 		System.out.println("Button Clicked");
 	}
@@ -22,11 +25,15 @@ public class jackinthebox {
 	          frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	          frame.add(imageLabel);
 	          frame.setVisible(true);
+	          JButton button = new JButton();
+	          frame.add(button);
 	          frame.pack();
+	          button.addActionListener(this);
 	     } catch (Exception e) {
 	          e.printStackTrace();
 	     }
 	}
+	
 
 	private JLabel createLabelImage(String fileName) {
 	     try {
@@ -54,6 +61,13 @@ public class jackinthebox {
 	     }
 	}
 		// TODO Auto-generated method stub
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 
 	}
 	
